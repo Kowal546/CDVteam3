@@ -7,8 +7,10 @@
     
 } */
 
+
 /* Body */
 body {
+
   margin: 10px 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
@@ -17,7 +19,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: lightgray;
+  background-color: yellowgreen;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -26,6 +28,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .kiedyspies {
   border-radius: 15px 50px;
   border: 2px solid violet;
@@ -156,6 +159,102 @@ footer p {
   margin: 0;
   text-shadow: 2px 2px darkgray;
 }
+
+
+/* Definicja animacji zmiany kolorów */
+@keyframes colorChange {
+  0% {
+      background-color: #3498db; /* Niebieski */
+      color: white;
+  }
+  20% {
+      background-color: #9b59b6; /* Fioletowy */
+      color: #f1c40f;
+  }
+  40% {
+      background-color: #e74c3c; /* Czerwony */
+      color: white;
+  }
+  60% {
+      background-color: #f1c40f; /* Żółty */
+      color: #2c3e50;
+  }
+  80% {
+      background-color: #2ecc71; /* Zielony */
+      color: white;
+  }
+  100% {
+      background-color: #3498db; /* Powrót do niebieskiego */
+      color: white;
+  }
+}
+
+/* Zastosowanie animacji do różnych elementów */
+
+/* Nagłówek */
+header {
+  animation: colorChange 8s infinite alternate ease-in-out;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Przyciski */
+.btn {
+  animation: colorChange 5s infinite linear;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Artykuł */
+article {
+  animation: colorChange 10s infinite alternate;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Stopka */
+footer {
+  animation: colorChange 12s infinite alternate-reverse ease-in-out;
+  padding: 20px;
+}
+
+.input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+  
 h3 {
   font-size: 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
