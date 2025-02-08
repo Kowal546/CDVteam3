@@ -28,6 +28,8 @@ img {
 }
 .kiedyspies {
   border-radius: 15px 50px;
+  border: 2px solid violet;
+  margin: 10px;
 }
 
 /* Stylowanie menu */
