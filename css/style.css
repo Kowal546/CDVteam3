@@ -160,6 +160,7 @@ footer p {
   text-shadow: 2px 2px darkgray;
 }
 
+
 /* Definicja animacji zmiany kolorów */
 @keyframes colorChange {
   0% {
@@ -221,7 +222,6 @@ footer {
   animation: colorChange 12s infinite alternate-reverse ease-in-out;
   padding: 20px;
 }
-
 
 .input[type="text"],
 select {
