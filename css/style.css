@@ -17,7 +17,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: lightgray;
+  background-color: yellowgreen;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -25,6 +25,11 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+.kiedyspies {
+  border-radius: 15px 50px;
+  border: 2px solid violet;
+  margin: 10px;
 }
 
 /* Stylowanie menu */
@@ -86,8 +91,19 @@ article {
 aside {
   width: 30%;
   padding: 20px;
-  background-color: darkgray;
+  background-color: rgb(250, 102, 44);
+  animation-name: article;
+  animation-duration: 5s;
+  animation-iteration-count: 6;
   border-left: 3px dotted black;
+}
+@keyframes article {
+  from {
+    background-color: rgb(250, 102, 44);
+  }
+  to {
+    background-color: yellow;
+  }
 }
 
 /* .ads {
@@ -141,6 +157,7 @@ footer p {
   text-shadow: 2px 2px darkgray;
 }
 
+
 .input[type="text"],
 select {
   width: 100%;
@@ -171,4 +188,12 @@ div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+  
+h3 {
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: blueviolet;
+  background-color: cornsilk;
+  text-align: center;
 }
