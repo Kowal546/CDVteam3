@@ -7,8 +7,10 @@
     
 } */
 
+
 /* Body */
 body {
+
   margin: 10px 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
@@ -26,6 +28,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .kiedyspies {
   border-radius: 15px 50px;
   border: 2px solid violet;
@@ -157,6 +160,68 @@ footer p {
   text-shadow: 2px 2px darkgray;
 }
 
+
+/* Definicja animacji zmiany kolorów */
+@keyframes colorChange {
+  0% {
+      background-color: #3498db; /* Niebieski */
+      color: white;
+  }
+  20% {
+      background-color: #9b59b6; /* Fioletowy */
+      color: #f1c40f;
+  }
+  40% {
+      background-color: #e74c3c; /* Czerwony */
+      color: white;
+  }
+  60% {
+      background-color: #f1c40f; /* Żółty */
+      color: #2c3e50;
+  }
+  80% {
+      background-color: #2ecc71; /* Zielony */
+      color: white;
+  }
+  100% {
+      background-color: #3498db; /* Powrót do niebieskiego */
+      color: white;
+  }
+}
+
+/* Zastosowanie animacji do różnych elementów */
+
+/* Nagłówek */
+header {
+  animation: colorChange 8s infinite alternate ease-in-out;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Przyciski */
+.btn {
+  animation: colorChange 5s infinite linear;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Artykuł */
+article {
+  animation: colorChange 10s infinite alternate;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Stopka */
+footer {
+  animation: colorChange 12s infinite alternate-reverse ease-in-out;
+  padding: 20px;
+}
 
 .input[type="text"],
 select {
