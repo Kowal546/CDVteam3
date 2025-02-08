@@ -160,7 +160,6 @@ footer p {
   text-shadow: 2px 2px darkgray;
 }
 
-
 /* Definicja animacji zmiany kolorów */
 @keyframes colorChange {
   0% {
@@ -254,7 +253,7 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
 }
-  
+
 h3 {
   font-size: 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
