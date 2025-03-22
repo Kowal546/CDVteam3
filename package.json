@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Kowal546/CDVteam3#readme",
   "dependencies": {
-    "create-react-app": "^5.1.0"
+    "create-react-app": "^1.2.1"
   }
 }
