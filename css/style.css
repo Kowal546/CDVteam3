@@ -7,10 +7,8 @@
     
 } */
 
-
 /* Body */
 body {
-
   margin: 10px 0;
   font-size: 16px;
   font-family: "Lato", sans-serif;
@@ -19,7 +17,7 @@ body {
 #container {
   border: 2px dashed black;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: yellowgreen;
+  background-color: lightgray;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -27,12 +25,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.kiedyspies {
-  border-radius: 15px 50px;
-  border: 2px solid violet;
-  margin: 10px;
 }
 
 /* Stylowanie menu */
@@ -94,19 +86,8 @@ article {
 aside {
   width: 30%;
   padding: 20px;
-  background-color: rgb(250, 102, 44);
-  animation-name: article;
-  animation-duration: 5s;
-  animation-iteration-count: 6;
+  background-color: darkgray;
   border-left: 3px dotted black;
-}
-@keyframes article {
-  from {
-    background-color: rgb(250, 102, 44);
-  }
-  to {
-    background-color: yellow;
-  }
 }
 
 /* .ads {
@@ -160,105 +141,133 @@ footer p {
   text-shadow: 2px 2px darkgray;
 }
 
+.fade-in {
+  animation: fadeIn 2s ease-in forwards;
+  opacity: 0;
+}
 
-/* Definicja animacji zmiany kolorów */
-@keyframes colorChange {
-  0% {
-      background-color: #3498db; /* Niebieski */
-      color: white;
-  }
-  20% {
-      background-color: #9b59b6; /* Fioletowy */
-      color: #f1c40f;
-  }
-  40% {
-      background-color: #e74c3c; /* Czerwony */
-      color: white;
-  }
-  60% {
-      background-color: #f1c40f; /* Żółty */
-      color: #2c3e50;
-  }
-  80% {
-      background-color: #2ecc71; /* Zielony */
-      color: white;
-  }
-  100% {
-      background-color: #3498db; /* Powrót do niebieskiego */
-      color: white;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 
-/* Zastosowanie animacji do różnych elementów */
-
-/* Nagłówek */
-header {
-  animation: colorChange 8s infinite alternate ease-in-out;
-  padding: 20px;
-  text-align: center;
+.fade-out {
+  animation: fadeOut 2s ease-out forwards;
+  opacity: 1;
 }
 
-/* Przyciski */
-.btn {
-  animation: colorChange 5s infinite linear;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
 
-/* Artykuł */
-article {
-  animation: colorChange 10s infinite alternate;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
+@media (min-width: 576px) and (max-width: 768px) {
+  body {
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    margin: 0;
+  }
 
-/* Stopka */
-footer {
-  animation: colorChange 12s infinite alternate-reverse ease-in-out;
-  padding: 20px;
-}
+  #container {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    background-color: white;
+  }
 
-.input[type="text"],
-select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgb(249, 233, 233);
+  }
 
-.input[type="submit"] {
-  width: 100%;
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  nav ul {
+    display: flex;
+    gap: 10px;
+  }
 
-.input[type="submit"]:hover {
-  background-color: #45a049;
-}
+  nav ul li {
+    display: block;
+  }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-  
-h3 {
-  font-size: 25px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: blueviolet;
-  background-color: cornsilk;
-  text-align: center;
+  nav ul li a {
+    font-size: 16px;
+    color: #212529;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+  }
+
+  nav ul li a:hover {
+    background-color: #343a40;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+
+  .slider {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  main div {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f1f3f5;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+  }
+
+  article:hover,
+  aside:hover {
+    transform: translateY(-5px);
+  }
+
+  .ads {
+    display: none;
+  }
+
+  .widget img {
+    float: none;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in forwards;
+  }
+
+  footer {
+    font-size: 14px;
+    background-color: #dee2e6;
+    color: #212529;
+  }
+
+  footer p {
+    text-shadow: none;
+  }
 }
