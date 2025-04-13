@@ -1,158 +1,4 @@
-/* Stylowanie od ogółu czyli od container */
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
-
-/* Body */
-body {
-  margin: 10px 0;
-  font-size: 16px;
-  font-family: "Lato", sans-serif;
-}
-
-#container {
-  border: 2px dashed black;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.877);
-  background-color: lightgray;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Stylowanie menu */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 15px;
-  animation: colorChange 8s infinite alternate ease-in-out;
-  text-align: center;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  font-size: 18px;
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: white;
-  background-color: black;
-}
-
-/* Slider */
-.slider {
-  display: flex;
-}
-
-.slider img {
-  display: block;
-}
-
-/* Main */
-main {
-  display: flex;
-}
-
-main div {
-  display: flex;
-  width: calc(100% - 200px);
-}
-
-/* Article */
-article {
-  width: 70%;
-  padding: 20px;
-  animation: colorChange 10s infinite alternate;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Aside */
-aside {
-  width: 30%;
-  padding: 20px;
-  background-color: darkgray;
-  border-left: 3px dotted black;
-}
-
-/* Ads */
-.ads {
-  background-color: red;
-  width: 200px;
-  writing-mode: vertical-rl;
-  text-align: center;
-  font-size: 15pt;
-}
-
-/* Additional styling */
-.green {
-  background-color: darkgreen;
-}
-
-.widget {
-  margin-bottom: 50px;
-}
-
-.widget img {
-  float: left;
-  padding: 0 10px 5px 0;
-}
-
-.links ul {
-  list-style-type: square;
-  margin-left: 20px;
-  margin: 0;
-}
-
-.links ul li {
-  margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: lightgray;
-  border-top: 1px solid black;
-  text-align: center;
-  padding: 25px 0;
-  animation: colorChange 12s infinite alternate-reverse ease-in-out;
-}
-
-footer p {
-  margin: 0;
-  text-shadow: 2px 2px darkgray;
-}
-
-/* Przyciski */
-.btn {
-  animation: colorChange 5s infinite linear;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* Fade animations */
-.fade-in {
-  animation: fadeIn 2s ease-in forwards;
-  opacity: 0;
-}
-
-.fade-out {
   animation: fadeOut 2s ease-out forwards;
   opacity: 1;
 }
@@ -212,7 +58,126 @@ h3 {
   text-align: center;
 }
 
-/* Responsive styling */
+/* --- Merged Responsive Styles --- */
+
+/* Tablet size: featureMarcelinaS */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slider {
+    flex: 3;
+    overflow: hidden;
+  }
+
+  .slider img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .ads.green {
+    flex: 1;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    writing-mode: vertical-rl;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main > div {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+  }
+
+  article,
+  aside {
+    width: 100%;
+  }
+
+  .box {
+    flex: 1 1 90%;
+    max-width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  form input,
+  form select,
+  form button {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Mobile: main */
 @media (min-width: 576px) and (max-width: 768px) {
   body {
     background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
@@ -251,8 +216,6 @@ h3 {
     color: #212529;
     padding: 8px 14px;
     border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
     background-color: transparent;
   }
 
@@ -286,7 +249,6 @@ h3 {
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
   }
 
   article:hover,
@@ -317,6 +279,7 @@ h3 {
   }
 }
 
+/* Large desktop: main */
 @media screen and (min-width: 1201px) {
   #container {
     max-width: 1200px;

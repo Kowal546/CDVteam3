@@ -16,7 +16,6 @@
           </a>
         </section>
         <nav>
-          <!-- emmet ul>li*4>a[href="#"]{Przycisk} -->
           <ul>
             <li><a href="#">Strona główna</a></li>
             <li><a href="#">Galeria</a></li>
@@ -25,8 +24,10 @@
           </ul>
         </nav>
       </header>
-      <section class="slider">
-        <img src="https://unsplash.it/1000/300?image=913" alt="slider" />
+      <section class="slider-wrapper">
+        <div class="slider">
+          <img src="https://unsplash.it/1000/300?image=913" alt="slider" />
+        </div>
         <section class="ads green">
           <br />
           <br />
@@ -61,6 +62,30 @@
               architecto accusamus explicabo recusandae reiciendis facilis
               perferendis tempore ut facere numquam. Repellendus.
             </p>
+
+            <h3>Wyślij swoje dane i prześlemy Ci najpiękniejsze miejsca! </h3>
+
+            <div class="form-section">
+              <form action="/action_page.php">
+                <label for="fname">Twoje imię</label><br />
+                <input type="text" id="fname" name="firstname" placeholder="Wpisz swoje imię" /><br />
+
+                <label for="lname">Nazwisko</label><br />
+                <input type="text" id="lname" name="lastname" placeholder="Wpisz swoje nazwisko" /><br />
+
+                <label for="mail">E-mail</label><br />
+                <input type="text" id="mail" name="mail" placeholder="Wpisz swój e-mail" /><br />
+
+                <label for="country">Państwo</label>
+                <select id="country" name="country">
+                  <option value="polska">Polska</option>
+                  <option value="niemcy">Niemcy</option>
+                  <option value="grecja">Grecja</option>
+                </select>
+
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
           </article>
           <aside>
             <section class="widget">
