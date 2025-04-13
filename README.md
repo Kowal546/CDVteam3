@@ -10,7 +10,7 @@ This project is a simple website layout built using HTML, CSS, and JavaScript. I
 
 - CSS3
 
-- JavaScript (linked but not included in the provided code)
+- JavaScript
 
 ## Features
 
